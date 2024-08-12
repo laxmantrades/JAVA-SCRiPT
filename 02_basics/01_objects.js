@@ -1,50 +1,33 @@
-// const newUser = {
-//     user: 1,
-//     useremail: "laxmangiri@gmail.com",
-//     username : {
-//         Firstname: {
-//             lastname:"giri"
-//         }
-//     }
-    
-// }
 
-// console.log(newUser.username.Firstname.lastname)
-
-// const userDate= {
-//     Name: "laxman",
-//     DOB : {
-//         Year: 2058,
-//         Day: 07,
-//         Month: "Sep"
-//     }
-// }
-// console.log(userDate.DOB.Month)
-
-const Person1= {Name:"laxmam", Ag:"25", isloggedi: "true"}
-const Person2= {Na:"Ram", Age: "1000",isloggedin:"false"} ////the key shouæd be different
-const information1= {...Person1,
-     ...Person2,
-    }
-console.log(information1);
+const mysym= Symbol("laxman")
+let myobj = {
+    "Name": "laxman",
+    email:"laxman@google.com",
+    phone : 9809572241,
+    [mysym]: "Hi i am laxman",
+    address:"denmark",
+    lastlogindays : ["Monday", "Tuesday"]
 
 
-
-const obj1 = {1: "a", 2: "b"}
-const obj2 = {3: "a", 4: "b"}
-const obj4 = {5: "a", 6: "b"}
-
-// const obj3 = { obj1, obj2 }
-// const obj3 = Object.assign({}, obj1, obj2, obj4)
-
-const obj3 = {...obj1, ...obj2}
- console.log(Object.entries(Person1));
-
-const Mix= { 
-    name:"laxman",
-    Firstname:["laxman","Giri"]
 }
-console.log(Mix.Firstname[0]);
+console.log(myobj.email,myobj.phone) // wrong method
+console.log(myobj["email"])
+console.log(myobj["Name"])
+
+myobj.email="laxman@microsoft.com" //to change email
+console.log(myobj) 
+
+
+myobj.greeting = function(){
+    console.log("Hi, how are you")
+}
+console.log(myobj.greeting())
+console.log(myobj)
+
+myobj.Class= function(){
+    console.log(`I read in class 12 and i am ${this.Name}`)
+}
+console.log(myobj.Class)
 
 
 
