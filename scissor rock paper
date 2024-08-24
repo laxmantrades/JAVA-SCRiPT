@@ -1,0 +1,106 @@
+let computerDecesion; 
+function randomChoice() {
+     computerDecesion= Math.round(Math.random()*2+1); //for random number   
+}
+
+let livescore = {
+    computer: 0,
+    user: 0,
+    tier: 0,
+};
+
+// Function to save score to local storage
+function saveScore() {
+    localStorage.setItem("livescore", JSON.stringify(livescore));
+}
+
+// Function to load score from local storage
+function loadScore() {
+    let savedScore = localStorage.getItem("livescore");
+    if (savedScore) {
+        livescore = JSON.parse(savedScore);
+    }
+}
+
+function livescoregame(){
+    document.querySelector(".livescore").innerHTML =
+    `Computer won: ${livescore.computer}, User won: ${livescore.user}, Tie: ${livescore.tier}`;
+    saveScore(); // Save the score after updating it
+}
+
+function computerD() {
+    randomChoice();
+    if (computerDecesion === 1) {
+        computerchoicetext = "rock";
+    } else if (computerDecesion === 2) {
+        computerchoicetext = "paper";
+    } else if (computerDecesion === 3) {
+        computerchoicetext = "scissor";
+    }
+}
+ 
+/*************************************** this is for rock ****/
+function rock() {
+    computerD();
+    let finalresult;
+    if (computerchoicetext === "rock") {
+        finalresult = "Tie";
+        livescore.tier++;
+    } else if (computerchoicetext === "paper") {
+        finalresult = "Computer win";
+        livescore.computer++;
+    } else {
+        finalresult = "You win";
+        livescore.user++;
+    }
+    document.querySelector(".result2").innerHTML = 
+    `You chose rock <br>
+    Computer chose ${computerchoicetext}.<br>
+    ${finalresult}`;
+    livescoregame();
+}
+
+/*************************************** this is for paper ****/
+function paper() {
+    computerD();
+    let finalresult;
+    if (computerchoicetext === "paper") {
+        finalresult = "Tie";
+        livescore.tier++;
+    } else if (computerchoicetext === "scissor") {
+        finalresult = "Computer win";
+        livescore.computer++;
+    } else {
+        finalresult = "You win";
+        livescore.user++;
+    }
+    document.querySelector(".result2").innerHTML = 
+    `You chose paper <br>
+    Computer chose ${computerchoicetext}.<br>
+    ${finalresult}`;
+    livescoregame();
+}
+
+/********************* this is for scissor ********************/
+function sciss() {
+    computerD();
+    let finalresult;
+    if (computerchoicetext === "scissor") {
+        finalresult = "Tie";
+        livescore.tier++;
+    } else if (computerchoicetext === "rock") {
+        finalresult = "Computer win";
+        livescore.computer++;
+    } else {
+        finalresult = "You win";
+        livescore.user++;
+    }
+    document.querySelector(".result2").innerHTML = 
+    `You chose scissor <br>
+    Computer chose ${computerchoicetext}.<br>
+    ${finalresult}`;
+    livescoregame();
+}
+
+// Load the score when the page loads
+window.onload = loadScore;
