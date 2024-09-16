@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hey this is Java Script</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        // setTimeout(function lax() {
+        //     console.log("hi");
+            
+            
+        // },2000)
+        let myfunction= function (name) {
+            console.log(`My name is ${name}`)}
+        let clear; //it is empty because i can't use the value of clear from the addeventlistner because 
+        //it is a local variable of that function only
+        
+
+        const button=document.querySelector("#start")
+        button.addEventListener("click", function(){
+            
+            clear=setTimeout(myfunction,'2000',"laxman") //settimeout accepts function,time and name
+            //the name refers to the name of the myfunctio
+            
+            })
+        const stop=document.querySelector("#stop")
+        stop.addEventListener('click',function(){
+            clearTimeout(clear)
+        })
+
+
+       
+       
+    </script>
+</body>
+</html>

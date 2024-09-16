@@ -49,9 +49,9 @@ const Info1 = ["laxman*googke.com"]
 const Info2 = Info1
  Info1.email= "kinamhai123@gmail.com"
  
-  console.log(Info1, Info2);
- console.log(Info1.email);
- console.log(Info2.email);
+  console.log(Info1);
+//  console.log(Info1.email);
+//  console.log(Info2.email);
  
 
  

@@ -10,24 +10,28 @@ let myobj = {
 
 
 }
-console.log(myobj.email,myobj.phone) // wrong method
-console.log(myobj["email"])
-console.log(myobj["Name"])
-
-myobj.email="laxman@microsoft.com" //to change email
-console.log(myobj) 
+console.log(myobj["lastlogindays"][0]); //same output
+console.log(myobj.lastlogindays[0]); //sameoutput
 
 
-myobj.greeting = function(){
-    console.log("Hi, how are you")
-}
-console.log(myobj.greeting())
-console.log(myobj)
+// console.log(myobj.email,myobj.phone) // wrong method
+// console.log(myobj["email"])
+// console.log(myobj["Name"])
 
-myobj.Class= function(){
-    console.log(`I read in class 12 and i am ${this.Name}`)
-}
-console.log(myobj.Class)
+// myobj.email="laxman@microsoft.com" //to overwrite email
+// console.log(myobj) 
+
+
+// myobj.greeting = function(){ //to insert a function in the object
+//     console.log("Hi, how are you")
+// }
+// console.log(myobj.greeting())
+// console.log(myobj)
+
+// myobj.Class= function(){ //to insert a class function in the object
+//     console.log(`I read in class 12 and i am ${this.Name}`)
+// }
+// console.log(myobj.Class)
 
 
 

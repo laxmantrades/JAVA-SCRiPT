@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <h1>Does my sparkle burn your eye</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </body>
+    <script>
+
+         //const stop=setInterval(function(){
+            //console.log("Hi this is running"+Math.random())
+            
+        //})
+        //clearInterval(stop) //to stop the interval
+
+                               /*********************** */
+
+        let myfunction= function (name) {
+            console.log(`My name is ${name}`)}
+        let clear; //it is empty because i can't use the value of clear from the addeventlistner because 
+        //it is a local variable of that function only
+        
+
+        const button=document.querySelector("#start")
+        button.addEventListener("click", function(){
+            
+            clear=setInterval(myfunction,'2000',"laxman") //setinterval accepts function,time and name
+            //the name refers to the name of the myfunction
+            })
+        const stop=document.querySelector("#stop")
+        stop.addEventListener('click',function(){
+            clearInterval(clear)
+        })
+
+    </script>
+</body>
+</html>

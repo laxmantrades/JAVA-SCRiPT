@@ -9,38 +9,39 @@ MarvelHeroes.push("Spiderman")
 // console.log(MarvelHeroes)
 
 NepaliHeroes=["RajeshHamal, JayaKishan"]
-Allheroes = [...MarvelHeroes,...DcHeroes,...NepaliHeroes]
+Allheroes = [...MarvelHeroes,...DcHeroes,...NepaliHeroes]//spread operator makes all the element in one place
 // console.log(Allheroes)
 
-console.log(Allheroes.pop(NepaliHeroes))  //pop deletes the element from array
+//console.log(Allheroes.pop(NepaliHeroes))  //pop deletes the element from array
 // console.log(Allheroes)
 Allheroes.unshift("loki") 
 // Allheroes.shift("laxman")
 //Allheroes.shift() // this is just to delete the added ones
-console.log(Allheroes);
-console.log(Allheroes.includes("Ironman")) // just to check wether the array has this element
-console.log(Allheroes.indexOf("Ironman")) // to find the position of the element
+//console.log(Allheroes);
+//console.log(Allheroes.includes("Ironman")) // just to check wether the array has this element
+//console.log(Allheroes.indexOf("Ironman")) // to find the position of the element
 
 
-console.log("A", MarvelHeroes)
+console.log("A:", MarvelHeroes)
 
 const myname =[0,"laxman","giri","nepal"]
-console.log("d",myname.slice(1,2)) //slice means last disit is not included
-console.log("c",myname.splice(1,2)) //splice means last digit is included
+console.log("d",myname.slice(1,2)) //slice means last disit is not included => d [ 'laxman' ]
+console.log("c",myname.splice(1,2)) //splice means last digit is included =>> c [ 'laxman', 'giri' ]
 
 ////////////////
 Problem= [0,1,2,[1,2,[3,4,"laxman"]]]
-console.log(Problem)
-newProblem= Problem.flat(4) //// flat means no mini arrays
-console.log(newProblem)
+//console.log(Problem)
+newProblem= Problem.flat(4) //// flat means no mini arrays that means one array
+//console.log(newProblem)
+oneproblem= Array.isArray(Problem)
 oneproblem= Array.isArray("laxman")
-console.log(oneproblem);
-console.log(Array.from("nepal"))
-console.log(Array.from({name:"laxman"}))
+//console.log(oneproblem);
+//console.log(Array.from("nepal"))
+//console.log(Array.from({name:"laxman"}))
 
 score=100
 score2=200
-console.log(Array.of(score,score2))
+//console.log(Array.of(score,score2))
 
 
 
