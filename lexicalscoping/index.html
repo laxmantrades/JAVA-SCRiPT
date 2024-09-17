@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="orange">Orange</button>
+    <button id="red">Red</button>
+</head>
+<body>
+    <script>
+        // document.querySelector("#orange").onclick=function(){
+        //     document.body.style.backgroundColor="orange"
+        // }
+        // document.querySelector("#red").onclick=function(){
+        //     document.body.style.backgroundColor="red"
+        // }
+
+        /************* N o w Using C l o s u r e  ************/
+        function changecolor(color){
+           function namecolor(){
+            document.body.style.backgroundColor=`${color}`
+            
+        }
+          return namecolor// this return saves the whole function changecolor
+        
+        }
+        document.querySelector("#orange").onclick= changecolor("orange")        //remeber this accepts only function (no refrence)
+
+    
+
+    </script>
+    
+</body>
+</html>
